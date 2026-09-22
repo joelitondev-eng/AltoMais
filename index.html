@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AutoMax - Loja Automotiva</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">🚗 AutoMax</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button id="carrinhoBtn">
+            🛒 Carrinho (<span id="quantidade">0</span>)
+        </button>
+    </header>
+
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+            <h1>Peças e acessórios para o seu carro</h1>
+
+            <p>
+                Encontre produtos automotivos de qualidade
+                para deixar seu veículo ainda melhor.
+            </p>
+            <h2>! Aviso !</h2>
+            
+<p>Este site foi desenvolvido para fins de estudo e apresentação de portfólio. Não realizamos vendas ou pagamentos através desta página.</p>
+            <a href="#produtos" class="botao">
+                Ver produtos
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- PRODUTOS -->
+    <section id="produtos">
+
+        <h2>Nossos produtos</h2>
+
+        <div class="produtos-container">
+
+            <div class="produto">
+                <div class="produto-imagem">🛞</div>
+
+                <h3>Pneu Esportivo</h3>
+
+                <p>
+                    Pneu de alta qualidade para veículos.
+                </p>
+
+                <strong>R$ 399,90</strong>
+
+                <button onclick="adicionarCarrinho('Pneu Esportivo', 399.90)">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="produto-imagem">🔋</div>
+
+                <h3>Bateria Automotiva</h3>
+
+                <p>
+                    Bateria com excelente desempenho.
+                </p>
+
+                <strong>R$ 549,90</strong>
+
+                <button onclick="adicionarCarrinho('Bateria Automotiva', 549.90)">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="produto-imagem">💡</div>
+
+                <h3>Kit LED</h3>
+
+                <p>
+                    Iluminação moderna para seu veículo.
+                </p>
+
+                <strong>R$ 149,90</strong>
+
+                <button onclick="adicionarCarrinho('Kit LED', 149.90)">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="produto-imagem">🧼</div>
+
+                <h3>Kit de Limpeza</h3>
+
+                <p>
+                    Produtos para manter seu carro limpo.
+                </p>
+
+                <strong>R$ 89,90</strong>
+
+                <button onclick="adicionarCarrinho('Kit de Limpeza', 89.90)">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="servicos">
+
+        <h2>Nossos serviços</h2>
+
+        <div class="servicos-container">
+
+            <div>
+                <h3>🔧 Mecânica</h3>
+                <p>
+                    Manutenção e revisão do seu veículo.
+                </p>
+            </div>
+
+            <div>
+                <h3>🛞 Alinhamento</h3>
+                <p>
+                    Alinhamento e balanceamento.
+                </p>
+            </div>
+
+            <div>
+                <h3>🚿 Estética automotiva</h3>
+                <p>
+                    Limpeza e cuidados especiais.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+
+        <h2>Entre em contato</h2>
+
+        <form id="formulario">
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Seu e-mail"
+                required
+            >
+
+            <textarea
+                id="mensagem"
+                placeholder="Digite sua mensagem"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Enviar mensagem
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2026 AutoMax - Loja Automotiva</p>
+        <p>Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- CARRINHO -->
+
+<section id="carrinho" class="carrinho">
+
+    <h2>🛒 Meu Carrinho</h2>
+
+    <div id="listaCarrinho">
+        <p>Seu carrinho está vazio.</p>
+    </div>
+
+    <div class="resumo-carrinho">
+
+        <h3>
+            Total:
+            <span id="totalCarrinho">
+                R$ 0,00
+            </span>
+        </h3>
+
+        <button onclick="limparCarrinho()">
+            Limpar carrinho
+        </button>
+
+        <button onclick="finalizarCompra()">
+            Finalizar compra
+        </button>
+
+    </div>
+
+</section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

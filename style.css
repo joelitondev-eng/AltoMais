@@ -1,0 +1,537 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background: #111;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff3333;
+}
+
+#carrinhoBtn {
+    background: #e50909;
+    color: white;
+
+    border: none;
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#carrinhoBtn:hover {
+    background: #b00000;
+}
+
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        linear-gradient(135deg, #222, #555);
+}
+
+.hero-text {
+    max-width: 650px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+
+    background: #e50909;
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: #b00000;
+}
+
+
+/* PRODUTOS */
+
+#produtos {
+    padding: 70px 8%;
+}
+
+#produtos h2,
+.servicos h2,
+.contato h2 {
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-bottom: 40px;
+}
+
+.produtos-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.produto {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+}
+
+.produto-imagem {
+    font-size: 70px;
+
+    background: #eee;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+.produto h3 {
+    margin-bottom: 10px;
+}
+
+.produto p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.produto strong {
+    display: block;
+
+    font-size: 22px;
+
+    color: #e50909;
+
+    margin-bottom: 20px;
+}
+
+.produto button {
+    border: none;
+
+    background: #111;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background: #e50909;
+}
+
+
+/* SERVIÇOS */
+
+.servicos {
+    background: #111;
+
+    color: white;
+
+    padding: 70px 8%;
+}
+
+.servicos-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.servicos-container div {
+    background: #222;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.servicos-container h3 {
+    margin-bottom: 15px;
+}
+
+
+/* CONTATO */
+
+.contato {
+    padding: 70px 8%;
+}
+
+form {
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+form button {
+    background: #e50909;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #b00000;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background: #080808;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+}
+
+/* ===============================
+   CARRINHO
+   =============================== */
+
+.carrinho {
+    padding: 60px 8%;
+    background: #eeeeee;
+}
+
+.carrinho h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+#listaCarrinho {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* ITEM DO CARRINHO */
+
+.item-carrinho {
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-carrinho h3 {
+    margin-bottom: 5px;
+}
+
+.item-carrinho p {
+    color: #666;
+}
+
+
+/* CONTROLES */
+
+.controles {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.controles button {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.controles button:hover {
+    background: #e50909;
+}
+
+.controles span {
+    font-weight: bold;
+}
+
+
+/* BOTÃO REMOVER */
+
+.remover {
+    display: block;
+
+    margin-top: 10px;
+
+    background: #e50909;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.remover:hover {
+    background: #b00000;
+}
+
+
+/* RESUMO */
+
+.resumo-carrinho {
+    max-width: 800px;
+
+    margin: 30px auto 0;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: right;
+}
+
+.resumo-carrinho h3 {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+}
+
+.resumo-carrinho h3 span {
+    color: #e50909;
+}
+
+.resumo-carrinho button {
+    padding: 12px 18px;
+
+    margin-left: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    background: #111;
+
+    color: white;
+}
+
+.resumo-carrinho button:last-child {
+    background: #e50909;
+}
+
+.resumo-carrinho button:hover {
+    opacity: 0.8;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .item-carrinho {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .resumo-carrinho {
+        text-align: center;
+    }
+
+    .resumo-carrinho button {
+        margin: 5px;
+    }
+
+}
+
